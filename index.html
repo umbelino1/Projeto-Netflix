@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projeto - Netflix</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+
+
+    <style>
+      body {
+        margin: 0;
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        font-family: Arial;
+      }
+
+      /* INTRO */
+      .intro {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 1s ease;
+      }
+      /* Vídeo */
+      .intro video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* SITE */
+      .site {
+        display: none;
+        color: white;
+        padding: 20px;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="site" class="conteudo-principal">
+      <h1> Netflix</h1>
+      <h2>Quem está assistindo?</h2>
+      <ul class="lista-perfis">
+        <!-- perfil 1 -->
+        <li class="item-perfil">
+          <a href="catalogo/catalogo.html" class="perfil">
+            <figure class="avatar-container">
+              <span class="imagem-perfil tema-cris" aria-hidden="true">
+                <span class="icone-avatar">
+                  <img
+                    src="assets/1.webp"
+                    alt="Perfil de Guilherme"
+                    width="200"
+                    height="200"
+                  />
+                </span>
+              </span>
+              <figcaption class="nome-perfil">Guilherme</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <!-- perfil 2 -->
+        <li class="item-perfil">
+          <a href="catalogo/catalogo - pereira.html" class="perfil">
+            <figure class="avatar-container">
+              <span class="imagem-perfil tema-cris" aria-hidden="true">
+                <span class="icone-avatar">
+                  <img src="assets/2.webp" alt="Perfil do Pereira" />
+                </span>
+              </span>
+              <figcaption class="nome-perfil">Pereira</figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <!-- INTRO -->
+    <div class="intro" id="intro">
+      <video id="video" autoplay muted playsinline>
+        <source src="assets/tudum.mp4" type="video/mp4" />
+      </video>
+    </div>
+    
+    <script src="js/index.js"></script>
+  </body>
+</html>
